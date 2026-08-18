@@ -1,4 +1,4 @@
-## Python-Network-Information-Tool
+## Python-Network-Information-Tool Lab
 
 **Project Objective**
 
