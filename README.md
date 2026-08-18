@@ -251,4 +251,4 @@ After working through these problems, I was able to get my program running and c
 - Technical documentation
 - GitHub repository management
 
-Created by: Zakhena K.Shorter IT Professional | Recent IT Graduate
+Author: Zakhena K.Shorter IT Professional | Recent IT Graduate
