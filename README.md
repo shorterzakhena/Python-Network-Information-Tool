@@ -8,7 +8,7 @@ The objective of this project is to develop a beginner-friendly Python network t
 
 I created this project to practice Python programming and apply networking concepts to a practical IT troubleshooting situation. The program allows a user to enter a website or IP address and uses Python's built-in `socket` module to attempt to resolve the destination. The program then displays the hostname, IP address, and whether the test was successful. This project demonstrates how Python can be used to create simple tools that assist with basic network troubleshooting.
 
-**Technologies Used**
+**Tools Used**
 
 - Python 3
 - GitHub
@@ -25,138 +25,142 @@ To run this project, you will need:
 - An internet connection
 - A GitHub account if downloading the project directly from GitHub
 - A command-line terminal such as Command Prompt, PowerShell, Terminal, or Git Bash
+-  Markdown documentation
 
-**Project Setup**
+**Python Program Directions**
 
-**Step 1: Download the Project**
+**Step 1: Import the Socket Module**
 
-Download or clone this repository from GitHub.
+Start the program by importing Python's built-in `socket` module.
 
-**Step 2: Open the Project Folder**
-
-Open the downloaded project folder containing the Python file.
-
-**Step 3: Open a Terminal**
-
-Open Command Prompt, PowerShell, Terminal, or another command-line application inside the project folder.
-
-**Step 4: Verify Python Installation**
-
-Run:
-
-```text
-python --version
+```python
+import socket
 ```
 
-If Python is installed, the terminal should display the installed Python version.
+The `socket` module provides networking functions that allow the program to work with hostnames and IP addresses.
 
-**Step 5: Run the Program**
+**Step 2: Create the Program Title**
 
-Run:
+Add a title that identifies the program when it runs.
 
-```text
-python network_troubleshooter.py
+```python
+print("=" * 50)
+print("       PYTHON NETWORK TROUBLESHOOTING TOOL")
+print("=" * 50)
 ```
 
-The program will ask for a website or IP address to test.
+**Step 3: Ask the User for a Hostname or IP Address**
 
-**Step-by-Step Instructions**
+Use the `input()` function to ask the user what website or IP address they want to test.
 
-**Step 1: Create the GitHub Repository**
+```python
+hostname = input("\nEnter a website or IP address to test: ")
+```
 
-1. Sign in to GitHub.
-2. Create a new repository.
-3. Name the repository `python-network-troubleshooting-tool`.
-4. Set the repository visibility to Public.
-5. Add a README file.
+The user's response is stored in the `hostname` variable.
 
-**Step 2: Create the Python File**
+**Step 4: Display a Testing Message**
 
-1. Open the GitHub repository.
-2. Select **Add file**.
-3. Select **Create new file**.
-4. Name the file `network_troubleshooter.py`.
-5. Add the Python program to the file.
-6. Commit the changes to the repository.
+Tell the user that the network test is beginning.
 
-**Step 3: Create the Network Troubleshooting Program**
+```python
+print("\nTesting network connection...")
+print("-" * 50)
+```
 
-1. Import Python's `socket` module.
-2. Display the program title.
-3. Ask the user to enter a website or IP address.
-4. Use `socket.gethostbyname()` to attempt to resolve the destination.
-5. Display the resolved IP address if successful.
-6. Use exception handling to identify unsuccessful hostname resolution.
-7. Display a troubleshooting message.
-8. End the program.
+**Step 5: Attempt to Resolve the Hostname**
 
-**Step 4: Test the Program**
+Use `socket.gethostbyname()` to attempt to find the IP address associated with the hostname.
 
-1. Open the project on the computer.
-2. Open Command Prompt or Terminal.
-3. Navigate to the project folder.
-4. Run `python network_troubleshooter.py`.
-5. Test the program using a hostname such as `google.com`.
-6. Test the program using an IP address such as `8.8.8.8`.
-7. Verify that the program displays the expected results.
+```python
+ip_address = socket.gethostbyname(hostname)
+```
 
-**Step 5: Document the Project**
+**Step 6: Display the Successful Result**
 
-1. Update the README file.
-2. Document the objective and purpose of the project.
-3. List the technologies used.
-4. Document the skills demonstrated.
-5. Document the testing process.
-6. Add screenshots showing the project and test results.
+If the hostname is successfully resolved, display the hostname, IP address, and connection status.
 
-**Step 6: Commit the Completed Project**
+```python
+print("Hostname:", hostname)
+print("IP Address:", ip_address)
+print("Status: Connection successful")
+print("The destination could be reached successfully.")
+```
 
-Commit the completed files and documentation to the GitHub repository so the project can be viewed as part of a technical portfolio.
+**Step 7: Add Error Handling**
 
-**How the Program Works**
+Use `try` and `except` to handle situations where the hostname cannot be resolved.
 
-The program uses Python's built-in `socket` module to perform a basic hostname resolution test.
+```python
+except socket.gaierror:
+    print("Hostname:", hostname)
+    print("Status: Connection failed")
+    print("The destination could not be reached.")
+    print("Check the address and try again.")
+```
 
-1. The user enters a hostname or IP address.
-2. Python attempts to resolve the destination.
-3. If the hostname can be resolved, the program displays the hostname and corresponding IP address.
-4. The program reports a successful result.
-5. If the hostname cannot be resolved, the program catches the error.
-6. The program reports that the destination could not be reached through hostname resolution and provides a basic troubleshooting message.
+**Step 8: Add a Completion Message**
 
-This provides a simple example of using Python to assist with network troubleshooting.
+Add a message indicating that the troubleshooting test has finished.
 
-**Testing**
+```python
+print("-" * 50)
+print("Network troubleshooting test completed.")
+```
 
-The program was tested using both a hostname and an IP address.
+**Step 9: Combine the Code**
 
-**Test 1: Hostname**
+After completing each step, the complete Python program should look like this:
 
-**Input:**
+```python
+import socket
 
-`google.com`
+print("=" * 50)
+print("       PYTHON NETWORK TROUBLESHOOTING TOOL")
+print("=" * 50)
 
-**Expected Result:**
+hostname = input("\nEnter a website or IP address to test: ")
 
-The program should successfully resolve the hostname and display an IP address.
+print("\nTesting network connection...")
+print("-" * 50)
 
-**Actual Result:**
+try:
+    ip_address = socket.gethostbyname(hostname)
 
-*To be completed after testing.*
+    print("Hostname:", hostname)
+    print("IP Address:", ip_address)
+    print("Status: Connection successful")
+    print("The destination could be reached successfully.")
 
-### Test 2: IP Address
+except socket.gaierror:
+    print("Hostname:", hostname)
+    print("Status: Connection failed")
+    print("The destination could not be reached.")
+    print("Check the address and try again.")
 
-**Input:**
+print("-" * 50)
+print("Network troubleshooting test completed.")
+```
 
-`8.8.8.8`
+**Step 10: Run the Program**
 
-**Expected Result:**
+Run the Python program and enter a website or IP address when prompted.
 
-The program should successfully process the IP address.
+Example:
 
-**Actual Result:**
+```text
+google.com
+```
 
-*To be completed after testing.*
+The program should attempt to resolve the hostname and display the result.
+
+Test the program again using an IP address such as:
+
+```text
+8.8.8.8
+```
+
+Finally, test an invalid hostname to verify that the error-handling section works correctly.
 
 **Skills Demonstrated**
 
@@ -171,4 +175,3 @@ The program should successfully process the IP address.
 - Problem-solving
 - Technical documentation
 - GitHub repository management
--  Markdown documentation
