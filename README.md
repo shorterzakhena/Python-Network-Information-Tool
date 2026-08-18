@@ -14,7 +14,7 @@ I created this project to practice Python programming and apply networking conce
 - GitHub
 - Windows Command Prompt / Terminal
 - Python `socket` module
-- Markdown
+
 
 **Project Requirements**
 
@@ -25,7 +25,7 @@ To run this project, you will need:
 - An internet connection
 - A GitHub account if downloading the project directly from GitHub
 - A command-line terminal such as Command Prompt, PowerShell, Terminal, or Git Bash
--  Markdown documentation
+
 
 **Python Program Directions**
 
@@ -162,6 +162,81 @@ Test the program again using an IP address such as:
 
 Finally, test an invalid hostname to verify that the error-handling section works correctly.
 
+**How the Program Works**
+
+The program uses Python's built-in `socket` module to perform a basic network troubleshooting test.
+
+1. The program asks the user to enter a website or IP address.
+2. The program attempts to resolve the entered hostname or IP address.
+3. If the destination can be resolved successfully, the program displays the hostname, IP address, and a successful connection message.
+4. If the destination cannot be resolved, the program uses error handling to display a connection failure message.
+5. The program displays a message when the troubleshooting test is completed.
+
+The program demonstrates how Python can be used to perform a basic network-related troubleshooting task.
+
+**Testing Results**
+
+### Test 1 — Successful IP Address Test
+
+**Input:**
+
+`8.8.8.8`
+
+**Result:**
+
+The program successfully processed the IP address and displayed:
+
+- IP Address: 8.8.8.8
+- Status: Connection successful
+- The destination could be reached successfully.
+
+### Test 2 — Invalid Hostname Test
+
+**Input:**
+
+`not-a-real-website-12345.com`
+
+**Result:**
+
+The program correctly identified that the hostname could not be reached and displayed:
+
+- Status: Connection failed
+- The destination could not be reached.
+- The program instructed the user to check the address and try again.
+
+**Testing Conclusion**
+
+Both tests worked as expected. The successful test demonstrated that the program could process a valid IP address, while the failed test demonstrated that the program could handle an invalid hostname without crashing.
+
+**What I Learned**
+
+Through this project, I gained hands-on experience using Python to create a basic network troubleshooting tool.
+
+**What I Learned**
+
+I learned how to create and run a basic Python program.
+
+I learned how to:
+
+- Use the socket module.
+- Get information from the user.
+- Use variables.
+- Use try and except.
+- Test my program using Command Prompt.
+- Fix problems when my program would not run.
+- Use GitHub to store my Python project.
+- Add screenshots and information to my GitHub project.
+
+This project gave me more practice with Python and basic networking.
+
+**Challenges and Solutions**
+
+One of my biggest challenges was getting my Python file to run from Command Prompt. I had some problems with the file location and the Python command. I was able to fix it by finding the correct location of my Python file and running it using the full file path.
+
+I also had to learn how to organize my project on GitHub and add my screenshots.
+
+After working through these problems, I was able to get my program running and complete both of my tests successfully.
+
 **Skills Demonstrated**
 
 - Python programming
@@ -176,4 +251,4 @@ Finally, test an invalid hostname to verify that the error-handling section work
 - Technical documentation
 - GitHub repository management
 
-Created by: Zakhena K. Shorter | Python-Network-Information-Tool
+Created by: Zakhena K.Shorter IT Professional | Recent IT Graduate
