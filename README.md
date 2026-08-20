@@ -7,7 +7,6 @@ The goal of this project was to create a basic Python program that can test a we
 **Project Description**
 
 I created a Python program that allows the user to enter a website or IP address. The program checks the address and displays the IP address and connection status.
-
 I tested the program with a valid IP address and an invalid website address to make sure it could handle both successful and failed results.
 
 **Technologies Used**
@@ -67,13 +66,11 @@ I tested the program with a valid IP address and an invalid website address to m
 **What I Learned**
 
 I learned how to create and run a basic Python program. I also learned how to use the socket module, accept user input, use error handling, and test a program using Command Prompt.
-
 I also got more practice using GitHub to organize and document my work.
 
 **Challenges and Solutions**
 
 One of my biggest challenges was getting my Python file to run from Command Prompt. I had problems with the file location and the Python command. I was able to find the correct file path and get the program running successfully.
-
 I also had to learn how to organize my project and screenshots on GitHub.
 
 Author: Zakhena K. Shorter IT Professional | Recent IT Graduate
