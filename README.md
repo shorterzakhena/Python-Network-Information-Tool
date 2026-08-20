@@ -76,4 +76,4 @@ One of my biggest challenges was getting my Python file to run from Command Prom
 
 I also had to learn how to organize my project and screenshots on GitHub.
 
-Author: Zakhena K.Shorter IT Professional | Recent IT Graduate
+Author: Zakhena K. Shorter IT Professional | Recent IT Graduate
